@@ -1,11 +1,115 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Arvin Cheng</title>
+    <link rel="icon" href="./assets/personal_pictures/you_are_my_sunshine.png"> <!--kobe smile kekw-->
   </head>
   <body>
     <script type="module" src="main.js"></script>
+
+    <nav class="top-bar">
+      <div class="navigation">
+        <a href="#home">Home</a>
+        <a href="#about-me">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+      </div>
+    </nav>
+
+    <main>
+      <section id="home" class="home">
+        <div class="profile-image-container">
+          <img src="./assets/personal_pictures/personal_picture.jpg" alt="Profile Picture" class="profile-image" />
+        </div>
+        <div id="introduction-container">
+          <h1>Arvin Cheng</h1>
+          <h2>AC</h2>
+        </div>
+
+        <div id="links-button-container">
+          <a href="https://github.com/justac8510" target="_blank">
+            <img
+              src="./assets/icons/github-142-svgrepo-com.svg"
+              alt="GitHub"
+              style="width: 20px; height: 20px"
+            />
+          </a>
+          <a href="https://www.linkedin.com/in/arvin-cheng-b1947426a/" target="_blank">
+            <img
+              src="./assets/icons/linkedin-svgrepo-com.svg"
+              alt="LinkedIn"
+              style="width: 20px; height: 20px"
+            />
+          </a>
+          <a href="https://hackmd.io/@justac9900" target="_blank">
+            <img
+              src="./assets/icons/hackmd.svg"
+              alt="HackMD"
+              style="width: 20px; height: 20px"
+            />
+          </a>
+        </div>
+      </section>
+
+      <section id="about-me" class="about-me">
+        <div class="about-content">
+          <div class="about-image">
+            <img src="./assets/personal_pictures/fumo.JPG" alt="fumo">
+          </div>
+          <div class="about-text">
+            <h2>About Me:</h2>
+            <ul>
+              <li>Computer Science Undergraduate @ Pennsylvania State University</li>
+              <li>Interested in: Computer Vision, Computer Graphics, Computer Architectures</li>
+              <li>Proficient in C++, C, Python, Java and MATLAB</li>
+              <li>Fun Facts: I go with AC, that is my internet name</li>
+            </ul>
+            <button class="contact-btn">Contact me</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="experience">
+        <h2>Experiences</h2>
+        <div class="experience-list">
+          <div class="experience-item">
+            <div class="experience-title">Perception Team Member / Advanced Vehicle Team</div>
+            <div class="experience-date">August 2025 - December 2025</div>
+          </div>
+          <div class="experience-item">
+            <div class="experience-title">System Development Intern / E Ink Corporation</div>
+            <div class="experience-date">July 2025 - August 2025</div>
+          </div>
+          <div class="experience-item">
+            <div class="experience-title">Research Assistance / Pennsylvania State University</div>
+            <div class="experience-date">January 2025 - Present</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <!-- Project 1 content -->
+          </div>
+          <div class="project-card">
+            <!-- Project 2 content -->
+          </div>
+          <div class="project-card">
+            <!-- Project 3 content -->
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="gallery">
+        <!-- Gallery section for future implementation -->
+      </section>
+    </main>
+
+    <footer></footer>
   </body>
 </html>
