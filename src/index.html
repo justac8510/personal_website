@@ -3,30 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
     <title>Arvin Cheng</title>
     <link rel="icon" href="./assets/personal_pictures/you_are_my_sunshine.png"> <!--kobe smile kekw-->
   </head>
   <body>
-    <script type="module" src="main.js"></script>
-
     <nav class="top-bar">
       <div class="navigation">
-        <a href="#home">Home</a>
-        <a href="#about-me">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="gallery.html">Gallery</a>
       </div>
     </nav>
 
     <main>
       <section id="home" class="home">
         <div class="profile-image-container">
-          <img src="./assets/personal_pictures/personal_picture.jpg" alt="Profile Picture" class="profile-image" />
+          <img src="./assets/personal_pictures/personal_picture_2.jpg" alt="Profile Picture" class="profile-image" />
         </div>
         <div id="introduction-container">
           <h1>Arvin Cheng</h1>
-          <h2>AC</h2>
+          <h2>Ciallo～</h2>
         </div>
 
         <div id="links-button-container">
@@ -51,23 +50,34 @@
               style="width: 20px; height: 20px"
             />
           </a>
+          <a href="https://www.threads.com/@arvin_hhc?hl=zh-tw&xmt=AQF0XUsJMzg6k_n7EdyJWDx34WCTCHyWsqqdpWa4V9XAVJc" target="_blank">
+            <img
+              src="./assets/icons/threads.svg"
+              alt="thread"
+              style="width: 20px; height: 20px"
+            />
+          </a>
         </div>
       </section>
 
       <section id="about-me" class="about-me">
         <div class="about-content">
           <div class="about-image">
-            <img src="./assets/personal_pictures/fumo.JPG" alt="fumo">
+            <img src="./assets/personal_pictures/neko_smile.png" alt="fumo">
           </div>
           <div class="about-text">
-            <h2>About Me:</h2>
+            <h2>About Me</h2>
             <ul>
               <li>Computer Science Undergraduate @ Pennsylvania State University</li>
-              <li>Interested in: Computer Vision, Computer Graphics, Computer Architectures</li>
-              <li>Proficient in C++, C, Python, Java and MATLAB</li>
-              <li>Fun Facts: I go with AC, that is my internet name</li>
+              <li>Interested in: Computer Visions, Computer Graphics, and Computer Architecture </li>
+              <li>Two years of Experiences in Machine Learning, Deep Learning, and Computer Visions</li>
+              <li>Two years of Experience in System Programming</li>
+              <li>Six years of Programming Experience, inclduing C++, C, and Python</li>
+              <li>Proficient in C++, C, Java, Python, and MATLAB</li>
+              <li>Currently Learning: Computer Hardware, Cuda, OpenGL, Rust</li>
             </ul>
             <button class="contact-btn">Contact me</button>
+            <button class="resume-btn">Resume</button>
           </div>
         </div>
       </section>
@@ -92,24 +102,66 @@
 
       <section id="projects" class="projects">
         <h2>Projects</h2>
+        <h3>These are all my main coding projects I have done</h3>
         <div class="projects-grid">
           <div class="project-card">
-            <!-- Project 1 content -->
+            <h1>Vehicle Vision</h1>
+            <p>
+              Responsible for fused sensor data from LiDAR, Radar, and ZED2i Camera to construct the spatial perception of the vehicle.
+              As a core Perception team member, I developed and maintained the ROS2 system to support vehicle's localization, object detection, and environmental awareness.
+            </p>
+            <img src="./assets/projects/cockandballstorture.png" alt="vehicle vision">
+            <div class="tech-tags">
+              <button>Python</button>
+              <button>C++</button>
+              <button>ROS2</button>
+            </div>
           </div>
           <div class="project-card">
-            <!-- Project 2 content -->
+            <h1>Tennis Balls Anaylsis</h1>
+            <p>
+              Leveraged a ResNet-18 and LSTM architecture to predict ball rotational speed with over 85% accuracy using 3–4 frame image sequences.
+              Applied ray-based geometric analysis to localize the ball's rotation axis, incorporating this information as an auxiliary training signal to improve model performance.
+            </p>
+            <img src="./assets/projects/tennisball.png" alt="tennis ball">
+            <div class="tech-tags">
+              <button>Python</button>
+              <button>PyTorch</button>
+              <button>OpenCV</button>
+            </div>
           </div>
           <div class="project-card">
-            <!-- Project 3 content -->
+            <h1>Memory Allocator</h1>
+            <p>
+              Implemented an OS-driven slab allocator with segregated free lists to dynamically manage memory, enabling efficient allocation, deallocation, and reallocation of fixed-size objects.
+            </p>
+            <div class="tech-tags">
+              <button>C</button>
+            </div>
+          </div>
+          <div class="project-card">
+            <h1>CPU Prototype</h1>
+            <p>
+              Implemented registers, datapath, control unit, ALU, and other componenets to construct a 32-bit, 5-stage pipelined CPU processor.
+              Recreated 5 main stages of MIPS processor to handle data hazards and data forwarding to ensure pipeline integrity.
+            </p>
+            <img src="./assets/projects/CMPEN331_waveform.png" alt="cpu waveform">
+            <div class="tech-tags">
+              <button>Verilog</button>
+            </div>
+          </div>
+          <div class="project-card">
+            <h1>Pinhole Camera Model</h1>
+            <p>
+              Utilized the Pinhole Camera Model to map 3D world points to 2D image coordinates using intrinsic and extrinsic camera parameters from two cameras, enabling accurate geometric reasoning for vision tasks.
+            </p>
+            <img src="./assets/projects/cmpen454project2.png" alt="Pinhole camera model">
+            <div class="tech-tags">
+              <button>MATLAB</button>
+            </div>
           </div>
         </div>
       </section>
-
-      <section id="gallery" class="gallery">
-        <!-- Gallery section for future implementation -->
-      </section>
     </main>
-
-    <footer></footer>
   </body>
 </html>

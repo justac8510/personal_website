@@ -8,16 +8,31 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
   color: #333;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/bg/cat_meme.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  z-index: -1;
 }
 
 /* Navigation Bar */
 .top-bar {
-  background-color: #999;
+  background-color: #ffffff;
   padding: 15px 0;
   position: sticky;
   top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;  
 }
 
 .navigation {
@@ -26,7 +41,7 @@ body {
   display: flex;
   justify-content: flex-end;
   gap: 30px;
-  padding: 0 40px;
+  padding: 0 60px;
 }
 
 .navigation a {
@@ -42,7 +57,6 @@ body {
 
 /* Home Section */
 .home {
-  background-color: #fff;
   min-height: calc(100vh - 200px);
   display: flex;
   flex-direction: column;
@@ -58,8 +72,8 @@ body {
 .profile-image {
   width: 200px;
   height: 200px;
+  border-radius: 50%;
   object-fit: cover;
-  border: 5px solid #999;
 }
 
 #introduction-container {
@@ -70,7 +84,7 @@ body {
 #introduction-container h1 {
   font-size: 2.5rem;
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 
 #introduction-container h2 {
@@ -95,24 +109,24 @@ body {
 
 /* About Me Section */
 .about-me {
-  background-color: #c4c4c4;
   padding: 80px 40px;
 }
 
 .about-content {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   display: flex;
   gap: 60px;
   align-items: center;
+  justify-content: center;
 }
 
 .about-image {
   flex: 0 0 250px;
   height: 250px;
   background-color: #888;
-  border-radius: 8px;
   overflow: hidden;
+  border-radius: 8px;
 }
 
 .about-image img {
@@ -123,6 +137,8 @@ body {
 
 .about-text {
   flex: 1;
+  padding-left: 20px;
+
 }
 
 .about-text h2 {
@@ -161,13 +177,27 @@ body {
   transition: background-color 0.3s ease;
 }
 
+.resume-btn {
+  background-color: #8b7b7b;
+  color: #000;
+  border: none;
+  padding: 12px 35px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
 .contact-btn:hover {
+  background-color: #6d5d5d;
+}
+
+.resume-btn:hover {
   background-color: #6d5d5d;
 }
 
 /* Experience Section */
 .experience {
-  background-color: #fff;
   padding: 80px 40px;
 }
 
@@ -184,9 +214,8 @@ body {
 }
 
 .experience-item {
-  background-color: #c4c4c4;
-  padding: 20px 30px;
-  margin-bottom: 15px;
+  padding: 10px 10px;
+  margin-bottom: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -206,15 +235,22 @@ body {
 
 /* Projects Section */
 .projects {
-  background-color: #fff;
   padding: 80px 40px;
+  text-align: center;
 }
 
 .projects h2 {
   text-align: center;
   font-size: 2.2rem;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
   font-weight: 600;
+}
+
+.projects h3 {
+  text-align: center;
+  font-size: 1.0rem;
+  margin-bottom: 50px;
+  font-weight: 300;
 }
 
 .projects-grid {
@@ -226,15 +262,67 @@ body {
 }
 
 .project-card {
-  background-color: #d3d3d3;
-  height: 300px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 30px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+.project-card h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.project-card p {
+  flex-grow: 1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+.project-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
   border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-card button {
+  display: inline-block;
+  background-color: #8b7b7b;
+  color: #ffffff;
+  border: none;
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.project-card button:hover {
+  background-color: #6d5d5d;
+  transform: scale(1.05);
 }
 
 /* Gallery Section */
@@ -269,8 +357,7 @@ footer {
   }
 
   .about-image {
-    flex: 0 0 250px;
-    width: 100%;
+    display: none;
   }
 
   .projects-grid {
