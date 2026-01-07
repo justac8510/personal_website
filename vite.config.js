@@ -3,6 +3,7 @@ import path from 'path';
 
 export default defineConfig({
   root: 'src', // Specifies 'src' as the root directory for your project
+  base: "/personal_website",
   resolve: {
     alias: {
       // This helps resolve paths like 'assets/pictures' from 'src'
