@@ -3,7 +3,7 @@ import path from 'path';
 
 export default defineConfig({
   root: 'src', // Specifies 'src' as the root directory for your project
-  base: "/personal_website",
+  base: "/personal_website/",
   resolve: {
     alias: {
       // This helps resolve paths like 'assets/pictures' from 'src'
@@ -12,12 +12,14 @@ export default defineConfig({
     },
   },
   build: {
-    // If your index.html is in src, you might want to specify the output directory
-    // to be directly in the project root, or keep it inside dist/src if preferred.
-    // By default, Vite builds to 'dist' relative to the root (which is 'src' in this case)
-    // To output to 'dist' in the project root:
     outDir: '../dist',
-    emptyOutDir: true, // Empties the output directory before building
+    emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, 'src/index.html'),
+        gallery: path.resolve(__dirname, 'src/gallery.html'),
+      },
+    },
   },
   server: {
     // If you need to serve files from the root directory (e.g., package.json for some tools)
